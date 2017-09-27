@@ -1,0 +1,16 @@
+use smarthome
+
+drop table t_device_driver;
+create table t_device_driver(
+	id integer auto_increment,
+	name varchar(64) not null,
+	address varchar(128) not null,
+	version varchar(64),
+	updateTime timestamp default CURRENT_TIMESTAMP,
+	author varchar(64),
+	deviceName varchar(64),
+	deviceVendor varchar(64),
+	deviceType varchar(64),
+	deviceProtocol varchar(64),	
+	PRIMARY KEY(id)
+);
